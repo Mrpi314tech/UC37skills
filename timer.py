@@ -1,15 +1,20 @@
 import sys
 import os
 import time
-sys.path.append('../')
 try:
     import history
 except ModuleNotFoundError:
-    import Python.history as history
+    try:
+        import Python.history as history
+    except ModuleNotFoundError:
+        import UC37software.Python.history as history
 try:
     import skill_data
 except ModuleNotFoundError:
-    import Python.skills.skill_data as skill_data
+    try:
+        import Python.skills.skill_data as skill_data
+    except ModuleNotFoundError:
+        import UC37software.Python.skills_data as skill_data
 file_location=os.path.expanduser('~')
 qstn=history.jsaid[0].split(' ')
 ringer=skill_data.ringer
@@ -20,7 +25,10 @@ while True:
     try:
         if 'hour' in qstn[strco]:
             hlong=qstn[strco-1]
-            hlong=int(hlong)
+            try:
+                hlong=int(hlong)
+            except:
+                hlong = int(input('how many hours? '))
             hlong*=3600
             while True:
                 hlong-=1
@@ -32,7 +40,10 @@ while True:
                     break
         elif 'minute' in qstn[strco]:
             hlong=qstn[strco-1]
-            hlong=int(hlong)
+            try:
+                hlong=int(hlong)
+            except:
+                hlong = int(input('how many minutes? '))
             hlong*=60
             while True:
                 hlong-=1
@@ -44,7 +55,11 @@ while True:
                     break
         elif 'second' in qstn[strco]:
             hlong=qstn[strco-1]
-            hlong=int(hlong)
+            try:
+                hlong=int(hlong)
+            except:
+                hlong = int(input('how many seconds? '))
+                
             while True:
                 hlong-=1
                 time.sleep(1)
