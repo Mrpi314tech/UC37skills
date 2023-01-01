@@ -28,6 +28,7 @@ while True:
             try:
                 hlong=int(hlong)
             except:
+                os.system('espeak -ven-us "How many hours?"')
                 hlong = int(input('how many hours? '))
             hlong*=3600
             while True:
@@ -43,6 +44,7 @@ while True:
             try:
                 hlong=int(hlong)
             except:
+                os.system('espeak -ven-us "How many minutes?"')
                 hlong = int(input('how many minutes? '))
             hlong*=60
             while True:
@@ -58,6 +60,7 @@ while True:
             try:
                 hlong=int(hlong)
             except:
+                os.system('espeak -ven-us "How many seconds?"')
                 hlong = int(input('how many seconds? '))
                 
             while True:
