@@ -11,6 +11,8 @@ Allow UC37 to control your kasa tp-link devices.
 python-kasa
 <br>
 <pre><code>pip install python-kasa</code></pre>
+Move the kasa file from ~/.local/bin to /usr/local/bin
+<pre><code>mv ~/.local/bin/kasa /usr/local/bin</code></pre>
 <h2>Timer</h2>
 A simple python timer.
 <br>
