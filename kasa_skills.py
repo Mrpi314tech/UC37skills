@@ -13,6 +13,6 @@ file_location=os.path.expanduser('~')
 alias=skill_data.alias
 qstn=history.jsaid[0]
 if 'on' in qstn:
-    os.system('kasa --alias '+alias+' on')
+    os.system('kasa --alias "'+alias+'" on')
 elif 'off' in qstn:
-    os.system('kasa --alias '+alias+' off')
+    os.system('kasa --alias "'+alias+'" off')
