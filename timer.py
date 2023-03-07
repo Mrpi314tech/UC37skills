@@ -36,7 +36,7 @@ while True:
                 time.sleep(1)
                 print(hlong)
                 if hlong == 0:
-                    os.system('vlc '+ringer)
+                    os.system('xdg-open '+ringer)
                     brk=1
                     break
         elif 'minute' in qstn[strco]:
